@@ -23,6 +23,6 @@ setuptools.setup(
                               "Topic :: Scientific/Engineering :: Machine Learning",
                               "Topic :: Scientific/Engineering :: Physics",
                               ],
-                 keywords="cosmology machine learning"
-                 python_requires='>=3.6',
+                 keywords="cosmology machine learning",
+                 python_requires='>=3.6'
                  )

@@ -1,0 +1,39 @@
+Metadata-Version: 2.1
+Name: mgemu
+Version: 0.0.1
+Summary: Gaussian Process Emulator for Modified Gravity power spectra
+Home-page: https://github.com/nesar/mgemu
+Author: Nesar Ramachandra
+Author-email: nramachandra@anl.gov
+License: UNKNOWN
+Description: ## Emulator for p(k) ratio for modified gravity models
+        
+        Minimal working example
+        
+        ```
+        from mgemu import emu
+        import numpy as np
+        
+        
+        # Calling an emulator instance
+        mgCosmo = emu()
+        
+        # Loading trained PCA and GP models
+        mgCosmo.load_models(GPmodelFile='models/GPflow_model', PCAmodelFile='models/PCA_model') 
+        
+        # Specify cosmological parameters: Omega_m, n_s, sigma_8, f_R_0, n
+        paraCosmos = np.array([0.14, 0.88, 0.8, 1e-6, 2]) 
+        
+        # Retrieve emulated r(k) = P_MG(k)/P_LCDM(k) 
+        ks, rCosmo = mgCosmo.emulate(paraCosmos) # Output: k, r(k)
+        
+        ```
+        
+Keywords: cosmology machine learning
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS IndependentIntended Audience :: Science/ResearchTopic :: Scientific/Engineering :: Machine Learning
+Classifier: Topic :: Scientific/Engineering :: Physics
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
